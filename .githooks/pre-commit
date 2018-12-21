@@ -1,0 +1,7 @@
+#!/bin/bash
+
+filesCodeSniffed=$(composer cs |  grep "^   \d" | cut -f5 -d" ")
+
+for file in $filesCodeSniffed; do
+  git add "$file"
+done

@@ -1,0 +1,10 @@
+parameters:
+    paths:
+        - src
+        - tests
+    level: max
+    autoload_files:
+        #- bin/.phpunit/phpunit-6.5/vendor/autoload.php
+
+includes:
+   - vendor/phpstan/phpstan-phpunit/extension.neon

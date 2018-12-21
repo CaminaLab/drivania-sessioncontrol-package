@@ -1,0 +1,38 @@
+{
+  "name": "caminalab/drivania-sessioncontrol-package",
+  "license": "proprietary",
+  "description": "Helper package to work with Drivania's SessionControl microservice.",
+  "authors": [
+    {
+      "name": "Drivania IT Team",
+      "email": "support@drivania.com"
+    }
+  ],
+  "require": {
+    "php": ">=7.1",
+    "ext-json": "*",
+    "guzzlehttp/guzzle": "^6.2"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^7.5",
+    "friendsofphp/php-cs-fixer": "^2.13",
+    "phpstan/phpstan": "^0.10.6",
+    "phpstan/phpstan-phpunit": "^0.10.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Drivania\\": "src/",
+      "Tests\\Drivania\\": "tests/"
+    }
+  },
+  "scripts": {
+    "cs": "vendor/bin/php-cs-fixer fix",
+    "stan": "vendor/bin/phpstan analyze",
+    "test": "vendor/bin/phpunit",
+    "post-update-cmd": [
+      "git config core.hooksPath .githooks || echo 'Git not available'"
+    ]
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true
+}
