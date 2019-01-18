@@ -20,7 +20,6 @@ use Drivania\SessionControl\Exceptions\UserDoesNotHavePermissionToAccessExceptio
  */
 class SessionControl implements SessionControlInterface
 {
-    public const ROUTEONE_SERVICE = 'routeone';
     public const ADAPTER_GUZZLE = 'Guzzle';
     public const ADAPTER_TEST = 'InMemory';
 
